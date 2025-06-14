@@ -1,0 +1,76 @@
+:root{
+  --bg-color: #e8e5e0;
+  --light-blue: #53ade3;
+  --dark-blue: #084569;
+  --orange: #e45b09;
+  --dark-orange: #4e3a2f;
+  --text: #2c1c25;
+  --radius: 2em;
+  font-size: 20px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--bg-color);
+  font-family: monospace;
+  color: var(--text);
+  height: 100dvh;
+}
+main{
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  height: 100%;
+}
+
+input[type="text"]{
+  outline: none;
+  border: none;
+  padding: 1em 1.3em;
+  display: block;
+  margin:2em auto;
+  width: 50%;
+  border-bottom: 2px solid var(--light-blue);
+  background-color: transparent;
+  
+  transition: all 250ms ease-in;
+}
+input[type="text"]:active,
+input[type="text"]:focus,
+input[type="text"]::selection{
+  border-radius: var(--radius);
+  background-color: var(--light-blue);
+  border-bottom: 2px solid var(--dark-blue);
+}
+
+input[type="submit"]{
+  background-color: var(--orange);
+  outline: none;
+  border: none; 
+  padding: 1em 1.3em;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.8em;
+   transition: all 250ms ease-in;
+  margin:0 1em;
+}
+input[type="submit"]:hover  {
+  border-radius: var(--radius);
+  color: var(--bg-color);
+}
+
+.temperature-card{
+  margin: 1em auto;
+  border-radius: var(--radius);
+  background: linear-gradient(var(--light-blue),var(--orange));
+  width:300px;
+  height: 450px;
+  & p{
+    margin: 1em 0;
+  }
+}
