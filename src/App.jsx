@@ -4,7 +4,6 @@ import Form from './components/Form';
 import Temperature from './components/Temperature';
 function App() {
   const [temp, setTemp] = useState(null);
-  console.log(import.meta.env.VITE_API_KEY);
   return (
     <main>
       <h2>Meteo Check</h2>

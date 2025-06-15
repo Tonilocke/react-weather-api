@@ -1,5 +1,5 @@
 :root{
-  --bg-color: #e8e5e0;
+  --white: #e8e5e0;
   --light-blue: #53ade3;
   --dark-blue: #084569;
   --orange: #e45b09;
@@ -16,7 +16,7 @@
 }
 
 body{
-  background-color: var(--bg-color);
+  background-color: var(--white);
   font-family: monospace;
   color: var(--text);
   height: 100dvh;
@@ -34,7 +34,7 @@ input[type="text"]{
   padding: 1em 1.3em;
   display: block;
   margin:2em auto;
-  width: 50%;
+  width:10%;
   border-bottom: 2px solid var(--light-blue);
   background-color: transparent;
   
@@ -46,6 +46,7 @@ input[type="text"]::selection{
   border-radius: var(--radius);
   background-color: var(--light-blue);
   border-bottom: 2px solid var(--dark-blue);
+   width: 30%;
 }
 
 input[type="submit"]{
@@ -68,9 +69,41 @@ input[type="submit"]:hover  {
   margin: 1em auto;
   border-radius: var(--radius);
   background: linear-gradient(var(--light-blue),var(--orange));
-  width:300px;
-  height: 450px;
+  width:400px;
+  height: 550px;
+  text-align: left;
+  & img{
+    width:  256px;
+  }
+}
+
+.infos{
+  width:100%;
+  height: 100%;
+  margin: 2em 1em;
   & p{
-    margin: 1em 0;
+    margin: 1em 0.7em;
+  }
+}
+
+span{
+
+    font-family: serif;
+    font-weight: 600;
+    color: var(--white);
+    font-size: 1.3em;
+    margin-left: 0.5em;
+}
+@media(max-width:629px){
+  input[type="text"]{
+    width:30%;
+  }
+  input[type="text"]:active,
+  input[type="text"]:focus,
+  input[type="text"]::selection{
+    width: 90%;
+  }
+  .temperature-card{
+    width:95%;
   }
 }
