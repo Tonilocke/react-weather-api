@@ -7,7 +7,7 @@ const Temperature = ({ temp }) =>{
     return(
         <div className="temperature-card">
             {temp.weather[0].main == "Clouds"? <img src={ Clouds } alt="weather image" />:null }
-            {temp.weather[0].main == "Sun"? <img src={Sun} alt="weather image" /> : null}
+            {temp.weather[0].main == "Sun" || temp.weather[0].main == "Clear" ? <img src={Sun} alt="weather image" /> : null}
             {temp.weather[0].main == "Rain"? <img src={Rain} alt="weather image" /> : null}
             <div className="Infos">
                 <p> <span>Temperature</span>: { parseInt(temp.main.temp) }</p>
